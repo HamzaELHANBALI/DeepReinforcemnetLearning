@@ -9,15 +9,12 @@ from torch.nn import Sequential, Softmax, CrossEntropyLoss
 
 from recordclass import recordclass
 
-from tensorboardX import SummaryWriter
-
 from torch import FloatTensor, LongTensor
 
 BATCH_SIZE = 12
 
 percentile = 70
-hidden_layer = 160
-
+hidden_layer = 64
 
 class Agent(nn.Module):
 	def __init__(self,obs,act,hidden_layer):
